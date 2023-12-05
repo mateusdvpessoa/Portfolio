@@ -28,17 +28,18 @@ export default function Footer(){
             background-size: 2px;
             background-color: white;
             border-radius:100%;
+            box-shadow: 0px 0px 15px #fff;
         }
     `
 
     return(
         <FooterStyle>
             <nav>
-                <a href="github.com/">
+                <a href="https://github.com/mateusdvpessoa" target ="_blank" rel = "external">
                     <img src={GithubIcon} alt="Ícone da plataforma Github" title = "Github"/>
                 </a>
-                <a href="github.com/">
-                    <img src={LinkedInIcon} alt="Ícone da plataforma Github" title = "LinkedIn"/>
+                <a href="https://www.linkedin.com/in/mateus-davi-5655b2147/" target ="_blank" rel ="external">
+                    <img src={LinkedInIcon} alt="Ícone da plataforma Github" title = "Linkedin"/>
                 </a>               
             </nav>
         </FooterStyle>

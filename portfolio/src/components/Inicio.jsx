@@ -8,40 +8,45 @@ const MainStyle = styled.main`
     background-color:#232121;
     color: #FFF;
     height:80vh;
+    
+    .text-content{
+        flex-direction: column;
+        height:15vh;
+        /* border:1px yellow solid; */
+        justify-content: center;
+        align-items: center;
+        gap:2vh;
+    }
+
+    .presentation-content{
+        width:40vw;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* border:1px solid white;  */
+        gap:1vw;
+        font-size:2em;
+        
+    }
+
+    .presentation-text{
+        font-size:1.5em;
+        color:orange;
+    }
+
     figure{
         display: flex;
         align-items: top;
         justify-content: center;
         border-radius: 50%;
-        width:32vw;
-        height:60vh;
+        width:28vw;
+        height:56vh;
         background-color: white;    
         overflow:hidden;
     }
     img{
-        height:66vh;
-        width:28vw;
-    }
-    .typing-animation {
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        letter-spacing: .15em; /* Adjust as needed */
-        animation: 
-            typing 2.5s steps(40, end),
-            blink-caret .75s step-end infinite;
-    }
-
-    /* The typing effect */
-    @keyframes typing {
-        from { width: 0 }
-        to { width: 100% }
-    }
-
-    /* The typewriter cursor effect */
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: orange; }
+        height:62vh;
+        width:24vw;
     }
 
         a {
@@ -518,33 +523,23 @@ const MainStyle = styled.main`
 
         .hero-container {
         position: relative;
-        padding: 200px 0;
+        padding: 10px 0;
         text-align: center;
-        }
-
-        .environment {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.5;
-        filter: blur(5px);
-        background:center no-repeat;
-        background-size: cover;
         }
 `
 
-export default function MainContent(){
+export default function Inicio(){
     return(
         <MainStyle>
-            <section class = "presentation-content">
-                <h1>Olá, eu sou Mateus Davi</h1>
-                <div class="hero-container">
-                <h2 class="hero glitch layers" data-text="Mateus Davi">
-                <span>Mateus Davi</span></h2>
-                </div>
-                <span class = "typing-animation">Web developer</span>
+            <section class = "text-content">
+                <section class = "presentation-content">
+                    <h1>Olá, eu sou</h1>
+                    <div class="hero-container">
+                    <h2 class="hero glitch layers" data-text="Mateus Davi">
+                    <span>Mateus Davi</span></h2>
+                    </div>
+                </section>
+                <span class = "presentation-text">Web developer</span>
             </section>
             <figure>
                 <img src={ProfilePhoto} alt="Foto de um web developer nada convencional com fundo branco"/>

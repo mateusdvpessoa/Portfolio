@@ -1,11 +1,15 @@
 import styled from 'styled-components'
-import MainContent from './MainContent'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import Inicio from './Inicio'
+import Sobre from './Sobre'
+import Projetos from './Projetos'
+import Contato from './Contato'
+import { Link } from 'react-router-dom'
 
 export default function Header(){
 
     const HeaderStyle = styled.header`
-        background-color: #8ff8f8;
+        background: linear-gradient(180deg, rgba(34,193,195,1) 0%, #ffffff 180%);
+        box-shadow: 0px 0px 10px orange;
         font-weight: 600;
         text-decoration:none;
         height:10vh;
@@ -13,6 +17,8 @@ export default function Header(){
         align-items:center;
         justify-content: center;
         font-size:2vh;
+        color:orange;
+        text-decoration: none;
         ul{
             display:flex;
             width:40vw;
@@ -20,33 +26,40 @@ export default function Header(){
             justify-content: space-evenly;
             list-style:none;
         }
-        Link:hover{
+        a{
+            background-color:transparent;
+            text-decoration: none;
+            color:white;
+            text-shadow: 0px  0px 10px #630d49;
+        }
+
+        a:hover{
             transition:0.5s;
             transform: scale(1.1);
-            color:rgb(230, 39, 230);
+            color:orange;
             cursor:pointer;
             border-bottom: white;
         }
     `
 
     return(
-        <BrowserRouter>
-            <HeaderStyle>
-                <nav>
-                    <ul>
-                        <Link to ="/">Início</Link>
-                        <Link to ="/sobre">Sobre</Link>
-                        <Link to ="/projetos">Projetos</Link>
-                        <Link to ="/contato">Vamos conversar</Link>
-                    </ul>
-                </nav>
-            </HeaderStyle>
-            <Routes>
-                <Route path ="/" element ={<MainContent/>}/>
-                <Route path ="/sobre" element ={<Sobre/>}/>
-                <Route path ="/projetos" element ={<Projetos/>}/>
-                <Route path ="/contato" element ={<Contato/>}/>
-            </Routes>
-        </BrowserRouter>
+        <HeaderStyle>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Início</Link>
+                    </li>
+                    <li>
+                        <Link to="Sobre">Sobre</Link>
+                    </li>
+                    <li>
+                        <Link to="Projetos">Projetos</Link>
+                    </li>
+                    <li>
+                        <Link to="Contato">Vamos conversar</Link>
+                    </li>
+                </ul>
+            </nav>
+        </HeaderStyle>
     )
 }

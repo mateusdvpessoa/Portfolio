@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { createGlobalStyle } from 'styled-components'
 import Header from './components/Header'
-import MainContent from './components/MainContent'
+import Inicio from './components/Inicio'
+import Sobre from './components/Sobre'
+import Projetos from './components/Projetos'
+import Contato from './components/Contato'
 import Footer from './components/Footer'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
   const GlobalStyle = createGlobalStyle`
     *{
@@ -17,12 +20,17 @@ function App() {
   
   return (
     <>
+      <GlobalStyle/>
       <BrowserRouter>
-        <GlobalStyle/>
         <Header/>
-        <MainContent/>
-        <Footer/>
+        <Routes>
+          <Route path = "/" element ={<Inicio/>}/>
+          <Route path = "/sobre" element ={<Sobre/>}/>
+          <Route path = "/projetos" element ={<Projetos/>}/>
+          <Route path = "/contato" element ={<Contato/>}/>  
+        </Routes>
       </BrowserRouter>
+      <Footer/>
     </>
   )
 }
