@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export default function Header(){
 
     const HeaderStyle = styled.header`
-        background: linear-gradient(180deg, rgba(34,193,195,1) 0%, #ffffff 180%);
+        background: linear-gradient(180deg, rgba(34,193,195,1) 50%, #ff5607 180%);
         box-shadow: 0px 0px 10px orange;
         font-weight: 600;
         text-decoration:none;
@@ -38,7 +38,6 @@ export default function Header(){
             transform: scale(1.1);
             color:orange;
             cursor:pointer;
-            border-bottom: white;
         }
     `
 

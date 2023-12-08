@@ -3,7 +3,8 @@ import ProfilePhoto from '../assets/foto-sem-fundo.png'
 
 const MainStyle = styled.main`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap:4vh;
     align-items: center;
     background-color:#232121;
     color: #FFF;
@@ -12,18 +13,17 @@ const MainStyle = styled.main`
     .text-content{
         flex-direction: column;
         height:15vh;
-        /* border:1px yellow solid; */
         justify-content: center;
         align-items: center;
         gap:2vh;
     }
 
     .presentation-content{
-        width:40vw;
+        padding-bottom:2vh;
+        width:35vw;
         display:flex;
         align-items: center;
         justify-content: flex-start;
-        /* border:1px solid white;  */
         gap:1vw;
         font-size:2em;
         
@@ -31,7 +31,8 @@ const MainStyle = styled.main`
 
     .presentation-text{
         font-size:1.5em;
-        color:orange;
+        color:#bebdbd;
+        text-shadow: 0px 0px 1px white;
     }
 
     figure{
@@ -54,21 +55,21 @@ const MainStyle = styled.main`
         }
 
 
-        .hero {
-        font-size: 6vh;
+    .hero {
+        font-size: 180%;
         line-height: 1;
         display: inline-block;
         color: #fff;
         z-index: 2;
-        letter-spacing: 10px;
+        letter-spacing: 4px;
 
         /* Bright things in dark environments usually cast that light, giving off a glow */
         filter: drop-shadow(0 1px 3px);
-        }
+    }
 
-        .layers {
+    .layers {
         position: relative;
-        }
+    }
 
         .layers::before,
         .layers::after {
@@ -536,10 +537,11 @@ export default function Inicio(){
                     <h1>Olá, eu sou</h1>
                     <div class="hero-container">
                     <h2 class="hero glitch layers" data-text="Mateus Davi">
-                    <span>Mateus Davi</span></h2>
+                    Mateus Davi</h2>
                     </div>
                 </section>
-                <span class = "presentation-text">Web developer</span>
+                <span class = "presentation-text">Sou desenvolvedor full-stack</span>
+                <span class = "alter-text-animation"></span>
             </section>
             <figure>
                 <img src={ProfilePhoto} alt="Foto de um web developer nada convencional com fundo branco"/>
